@@ -12,7 +12,7 @@ package pruebacsv;
 public class DatosClientes {
     
     
-    private String idCliente;
+    private String idCliente[];
     private String nombre;
     private String edad;
     private String dir;
@@ -20,13 +20,15 @@ public class DatosClientes {
     private String cel;
     private String saldo;
 
-    public String getIdCliente() {
+    public String[] getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(String idCliente) {
+    public void setIdCliente(String[] idCliente) {
         this.idCliente = idCliente;
     }
+
+   
 
     public String getNombre() {
         return nombre;

@@ -36,7 +36,7 @@ JFileChooser selectorArchivos = new JFileChooser();
     public static void main(String[] args) throws FileNotFoundException {
           //manda a llamar a clase clientes
          DatosClientes clientes = new DatosClientes();
-
+         
          
          int opc=0;  
          
@@ -52,11 +52,12 @@ JFileChooser selectorArchivos = new JFileChooser();
         //FUNCION QUE LEE Y RECORRE EL CSV
     try {
         while((line = br.readLine()) != null){
+           
             String values[]= line.split(";"); //COMO NO ME DABA CON COMA POR USO DE EXCEL, LO USÉ CON ;
            
            //ACÁ GUARDO LOS DATOS EN LA CLASE DE CLIENTES
            
-            clientes.setIdCliente(values[0].toString()); //POSICION 0 ES DE ID
+            clientes.setIdCliente(values[0].toString().split(line)); //POSICION 0 ES DE ID
             clientes.setNombre(values[0].toString()); //POSICION 1 ES DE NOMBRE
             clientes.setEdad(values[0].toString()); //POSICION 2 ES DE EDAD
             clientes.setDir(values[0].toString()); //POSICION 3 ES DE DIRECCION
@@ -64,18 +65,15 @@ JFileChooser selectorArchivos = new JFileChooser();
             clientes.setCel(values[0].toString()); //POSICION 5 ES DE CELULAR
             clientes.setSaldo(values[0].toString()); //POSICION 6 ES SALDO
             
-            System.out.println("id cliente perra: " +clientes.getIdCliente() +"\n\n\n");
-            
-           System.out.println("[iD: \t"+ values[0]+"\tNombre: "+ values[1]+"\tEdad:"+ values[2]+"\tDireccion: "+ values[3]+"\t Numcel: "+ values[4]+"\t Telefono: "+ values[5]+"\tSaldo: "+ values[6]+"]");
+            String datosclientes[]= clientes.getIdCliente();
+            System.out.println("id cliente perra: " + datosclientes[0] +"\n\n\n");
+             opc=opc+1;
+           //System.out.println("[iD: \t"+ values[0]+"\tNombre: "+ values[1]+"\tEdad:"+ values[2]+"\tDireccion: "+ values[3]+"\t Numcel: "+ values[4]+"\t Telefono: "+ values[5]+"\tSaldo: "+ values[6]+"]");
            
            switch(opc){
                 
                case 1: 
-                   System.out.println("\"Dame el id del cliente: \"");
-                   Scanner lecturaID = new Scanner (System.in);
-                     if(lecturaID.equals(values[0])){
-                         System.out.println("El maestro me la pela1");};
-                         break;
+                   
            
            }
            
