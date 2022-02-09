@@ -13,12 +13,12 @@ public class DatosClientes {
     
     
     private String idCliente[];
-    private String nombre;
-    private String edad;
-    private String dir;
-    private String tel;
-    private String cel;
-    private String saldo;
+    private String nombre[];
+    private String edad[];
+    private String dir[];
+    private String tel[];
+    private String cel[];
+    private String saldo[];
 
     public String[] getIdCliente() {
         return idCliente;
@@ -28,56 +28,57 @@ public class DatosClientes {
         this.idCliente = idCliente;
     }
 
-   
-
-    public String getNombre() {
+    public String[] getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String[] nombre) {
         this.nombre = nombre;
     }
 
-    public String getEdad() {
+    public String[] getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(String[] edad) {
         this.edad = edad;
     }
 
-    public String getDir() {
+    public String[] getDir() {
         return dir;
     }
 
-    public void setDir(String dir) {
+    public void setDir(String[] dir) {
         this.dir = dir;
     }
 
-    public String getTel() {
+    public String[] getTel() {
         return tel;
     }
 
-    public void setTel(String tel) {
+    public void setTel(String[] tel) {
         this.tel = tel;
     }
 
-    public String getCel() {
+    public String[] getCel() {
         return cel;
     }
 
-    public void setCel(String cel) {
+    public void setCel(String[] cel) {
         this.cel = cel;
     }
 
-    public String getSaldo() {
+    public String[] getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(String saldo) {
+    public void setSaldo(String[] saldo) {
         this.saldo = saldo;
     }
 
+   
+
+   
    
    
     
